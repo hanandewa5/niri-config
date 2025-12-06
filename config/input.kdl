@@ -1,0 +1,25 @@
+// =====================================
+// = INPUT CONFIGURATION
+// =====================================
+input {
+    // ----- Keyboard -----
+    keyboard {
+        xkb { }
+        numlock
+    }
+
+    // ----- Touchpad -----
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    // ----- Mouse -----
+    mouse { }
+
+    // ----- Trackpoint -----
+    trackpoint { }
+
+    // ----- Mouse Focus Behavior -----
+    // focus-follows-mouse max-scroll-amount="0%"
+}

@@ -1,0 +1,69 @@
+// =====================================
+// = WINDOW RULES & RECENT WINDOWS
+// =====================================
+
+// ----- Recent Windows -----
+recent-windows {
+    // off
+    debounce-ms 750
+    open-delay-ms 150
+    highlight {
+        active-color "#9f8e72"
+        urgent-color "#9b0000"
+        padding 0
+        corner-radius 4
+    }
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+        Alt+grave       { next-window     filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+    }
+}
+
+// ----- Disable Border Background Drawing -----
+window-rule {
+    draw-border-with-background false
+}
+
+// ----- Global Rounded Corners -----
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+// ----- WezTerm Fix -----
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// ----- Kitty floating -----
+window-rule {
+    match app-id=r#"kitty$"#
+    open-floating true
+    default-floating-position x=4 y=4 relative-to="bottom-right"
+    default-column-width {
+        proportion 0.3;
+    }
+}
+
+// ----- Firefox Picture-in-Picture floating -----
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// ----- Picture-in-Picture floating -----
+window-rule {
+    match title="(?i)picture.in.picture"
+    default-column-width {
+        proportion 0.25;
+    }
+    open-floating true
+    default-floating-position x=100 y=200 relative-to="bottom-right"
+}

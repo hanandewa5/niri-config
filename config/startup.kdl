@@ -1,0 +1,6 @@
+// =====================================
+// = STARTUP APPLICATIONS
+// =====================================
+spawn-at-startup "/usr/lib/pam_kwallet_init"
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"
+spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "qs -c noctalia-shell ipc call lockScreen lock"

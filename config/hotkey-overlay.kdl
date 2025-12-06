@@ -1,0 +1,6 @@
+// =====================================
+// = HOTKEY OVERLAY SETTINGS
+// =====================================
+hotkey-overlay {
+    skip-at-startup
+}
