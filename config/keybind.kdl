@@ -207,8 +207,8 @@ binds {
     // SYSTEM CONTROL
     // ---------------------------------
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+P { spawn-sh "niri msg output \"HDMI-A-1\" on"; }
-    Mod+O { spawn-sh "niri msg output \"HDMI-A-1\" off"; }
+    Mod+Shift+P { spawn-sh "niri msg output \"HDMI-A-1\" on"; }
+    Mod+Shift+O { spawn-sh "niri msg output \"HDMI-A-1\" off"; }
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
