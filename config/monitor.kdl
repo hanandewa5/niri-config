@@ -13,7 +13,7 @@ output "DP-3" {
 // ----- Secondary Monitor (HDMI-A-1) -----
 // Vertical (rotated)
 output "HDMI-A-1" {
-    // off
+    off
     mode "1920x1080@74.973"
     scale 1
     transform "90"

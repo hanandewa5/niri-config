@@ -11,6 +11,7 @@ binds {
     Mod+Ctrl+Comma hotkey-overlay-title="Setting" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
     Mod+Ctrl+Delete hotkey-overlay-title="Open Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Ctrl+Alt+Q hotkey-overlay-title="Lock the Screen: lockScreen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+E hotkey-overlay-title="File Exlorer" { spawn-sh "dolphin"; }
 
     // ---------------------------------
     // SYSTEM UI & OVERVIEW
@@ -31,8 +32,8 @@ binds {
     // ---------------------------------
     // VOLUME CONTROL
     // ---------------------------------
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
@@ -114,8 +115,8 @@ binds {
     // MULTI-MONITOR FOCUS
     // ---------------------------------
     Mod+Shift+Left  { focus-monitor-left; }
-    Mod+U           { focus-monitor-down; }
-    Mod+I           { focus-monitor-up; }
+    // Mod+U           { focus-monitor-down; }
+    // Mod+I           { focus-monitor-up; }
     Mod+Shift+Right { focus-monitor-right; }
 
     Mod+Shift+H { focus-monitor-left; }
@@ -145,6 +146,8 @@ binds {
     Mod+Shift+Down { focus-workspace-down; }
     Mod+Shift+Up   { focus-workspace-up; }
 
+    Mod+U   { focus-workspace-up; }
+    Mod+I   { focus-workspace-down; }
 
     // ---------------------------------
     // WORKSPACE MOVEMENT
@@ -212,4 +215,6 @@ binds {
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
+
+    Mod+R {spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
 }

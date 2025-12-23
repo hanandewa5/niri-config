@@ -32,7 +32,10 @@ window-rule {
 
 // ----- Global Rounded Corners -----
 window-rule {
+    // Rounded corners for a modern look.
     geometry-corner-radius 4
+
+    // Clips window contents to the rounded corner boundaries.
     clip-to-geometry true
 }
 
@@ -42,14 +45,61 @@ window-rule {
     default-column-width {}
 }
 
+window-rule {
+    match app-id=r#"steam$"#
+    open-floating true
+}
+
 // ----- Kitty floating -----
 window-rule {
     match app-id=r#"kitty$"#
     open-floating true
     default-floating-position x=4 y=4 relative-to="bottom-right"
     default-column-width {
+        proportion 0.5;
+    }
+    default-window-height {
+        proportion 0.5;
+    }
+
+}
+
+// ----- File Explorer -----
+// ----- Dolphin -----
+window-rule {
+    match app-id=r#"dolphin$"#
+    open-floating true
+    default-column-width {
+        proportion 0.5;
+    }
+    default-window-height {
+        proportion 0.5;
+    }
+}
+// ----- Nautilus -----
+window-rule {
+    match app-id="org.gnome.Nautilus"
+    open-floating true
+    default-column-width {
+        proportion 0.5;
+    }
+    default-window-height {
+        proportion 0.5;
+    }
+}
+
+// ----- Genymotion Player -----
+window-rule {
+    match app-id="Genymotion Player"
+    default-column-width {
         proportion 0.3;
     }
+}
+
+// ----- Network Connections -----
+window-rule {
+    match app-id="nm-connection-editor"
+    open-floating true
 }
 
 // ----- Firefox Picture-in-Picture floating -----
