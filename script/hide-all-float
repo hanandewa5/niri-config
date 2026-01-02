@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# how many floating windows to try (safe upper bound)
+MAX=20
+
+for i in $(seq 1 $MAX); do
+  # try to focus next floating window
+  if ! niri msg action focus-next-floating 2>/dev/null; then
+    break
+  fi
+
+  # move it to the side (adjust for your resolution)
+  niri msg action move-floating-window -x 3000 -y 0
+done
