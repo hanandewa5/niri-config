@@ -6,7 +6,10 @@ spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "qs -c noctalia-shell ipc call lockScreen lock"
 
 spawn-sh-at-startup "/home/hanan/.tarball-installations/zen/zen"
-spawn-sh-at-startup "/opt/google/chrome/google-chrome --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo"
-spawn-sh-at-startup "sleep 0.5 && /opt/google/chrome/google-chrome --app-id=hnpfjngllnobngcgfapefoaidbinmjnm"
 
-spawn-sh-at-startup "sleep 3 && niri msg action focus-monitor-left && niri msg action consume-or-expel-window-left && niri msg action focus-monitor-right"
+// spawn-sh-at-startup "/opt/google/chrome/google-chrome --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo"
+// spawn-sh-at-startup "sleep 0.5 && /opt/google/chrome/google-chrome --app-id=hnpfjngllnobngcgfapefoaidbinmjnm"
+// spawn-sh-at-startup "sleep 3 && niri msg action focus-monitor-left && niri msg action consume-or-expel-window-left && niri msg action focus-monitor-right"
+
+spawn-sh-at-startup "env DESKTOPINTEGRATION=1 /home/hanan/AppImages/rambox.appimage --no-sandbox %U"
+spawn-sh-at-startup "sleep 3 && niri msg action focus-monitor-left && niri msg action maximize-window-to-edges && niri msg action focus-monitor-right"

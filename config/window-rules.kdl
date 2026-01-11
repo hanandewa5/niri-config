@@ -164,6 +164,18 @@ window-rule {
 }
 
 window-rule {
+    // match at-startup=true app-id="chrome-cifhbcnohmdccbgoicgdjpfamggdegmo-Profile_1"
+    match app-id="rambox"
+    // match app-id=r#"ferdium$"#
+    opacity 0.95
+    // open-on-workspace "chat"
+    open-on-output "HDMI-A-1"
+    default-column-width {
+        proportion 1.0;
+    }
+}
+
+window-rule {
     match at-startup=true app-id="zen"
     open-on-workspace "browser"
 }
@@ -199,4 +211,48 @@ window-rule {
     default-window-height {
         proportion 0.5;
     }
+}
+
+window-rule {
+    match app-id="org.bleachbit.BleachBit"
+    open-floating true
+
+    default-column-width {
+        proportion 0.5;
+    }
+    default-window-height {
+        proportion 0.5;
+    }
+}
+
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    open-floating true
+
+    default-column-width {
+        proportion 0.5;
+    }
+
+    default-window-height {
+        proportion 0.5;
+    }
+}
+
+window-rule {
+    match app-id="yaak-app" title=r#"Select$"#
+    open-floating true
+
+    default-column-width {
+        proportion 0.5;
+    }
+
+    default-window-height {
+        proportion 0.5;
+    }
+}
+
+
+window-rule {
+    match app-id="com.github.weclaw1.ImageRoll"
+    open-floating true
 }

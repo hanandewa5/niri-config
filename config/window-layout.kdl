@@ -1,6 +1,8 @@
 // =====================================
 // = WINDOW LAYOUT & DISPLAY SETTINGS
 // =====================================
+prefer-no-csd
+
 layout {
     gaps 10
     center-focused-column "on-overflow"
